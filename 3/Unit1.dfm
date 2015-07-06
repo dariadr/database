@@ -1,0 +1,212 @@
+object Form1: TForm1
+  Left = 832
+  Top = 369
+  Width = 1036
+  Height = 640
+  Caption = 'Form1'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 16
+    Width = 1169
+    Height = 473
+    ActivePage = TabSheet2
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'TabSheet1'
+      object DBGrid1: TDBGrid
+        Left = 40
+        Top = 32
+        Width = 633
+        Height = 297
+        DataSource = DataModule2.DataSource1
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'TabSheet2'
+      ImageIndex = 1
+      object Label1: TLabel
+        Left = 24
+        Top = 24
+        Width = 88
+        Height = 13
+        Caption = #1085#1072#1095#1072#1083#1100#1085#1086#1077' '#1074#1088#1077#1084#1103
+      end
+      object Label2: TLabel
+        Left = 24
+        Top = 80
+        Width = 82
+        Height = 13
+        Caption = #1082#1086#1085#1077#1095#1085#1086#1077' '#1074#1088#1077#1084#1103
+      end
+      object Edit1: TEdit
+        Left = 216
+        Top = 24
+        Width = 121
+        Height = 21
+        TabOrder = 0
+      end
+      object Edit2: TEdit
+        Left = 216
+        Top = 80
+        Width = 121
+        Height = 21
+        TabOrder = 1
+      end
+      object Button2: TButton
+        Left = 160
+        Top = 296
+        Width = 75
+        Height = 25
+        Caption = #1074#1099#1087#1086#1083#1085#1080#1090#1100
+        TabOrder = 2
+        OnClick = Button2Click
+      end
+      object DBGrid2: TDBGrid
+        Left = 408
+        Top = 64
+        Width = 585
+        Height = 216
+        DataSource = DataModule2.DataSource2
+        TabOrder = 3
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'TabSheet3'
+      ImageIndex = 2
+      object DBGrid3: TDBGrid
+        Left = 32
+        Top = 40
+        Width = 921
+        Height = 361
+        DataSource = DataModule2.DataSource3
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+      end
+    end
+    object TabSheet4: TTabSheet
+      Caption = 'TabSheet4'
+      ImageIndex = 3
+      object DBGrid4: TDBGrid
+        Left = 24
+        Top = 40
+        Width = 913
+        Height = 361
+        DataSource = DataModule2.DataSource4
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+      end
+    end
+    object TabSheet5: TTabSheet
+      Caption = 'TabSheet5'
+      ImageIndex = 4
+      object Label8: TLabel
+        Left = 120
+        Top = 40
+        Width = 81
+        Height = 13
+        Caption = #1085#1086#1084#1077#1088' '#1072#1074#1090#1086#1073#1091#1089#1072
+      end
+      object Label9: TLabel
+        Left = 120
+        Top = 72
+        Width = 65
+        Height = 13
+        Caption = #1085#1086#1084#1077#1088' '#1088#1077#1081#1089#1072
+      end
+      object Label4: TLabel
+        Left = 120
+        Top = 112
+        Width = 67
+        Height = 13
+        Caption = #1076#1072#1090#1072' '#1080' '#1074#1088#1077#1084#1103
+      end
+      object Label5: TLabel
+        Left = 120
+        Top = 152
+        Width = 62
+        Height = 13
+        Caption = #1094#1077#1085#1072' '#1073#1080#1083#1077#1090#1072
+      end
+      object Label6: TLabel
+        Left = 488
+        Top = 136
+        Width = 72
+        Height = 13
+        Caption = #1080#1076#1077#1090#1080#1092#1080#1082#1072#1090#1086#1088
+      end
+      object Edit8: TEdit
+        Left = 240
+        Top = 32
+        Width = 121
+        Height = 21
+        TabOrder = 0
+      end
+      object Edit9: TEdit
+        Left = 240
+        Top = 72
+        Width = 121
+        Height = 21
+        TabOrder = 1
+      end
+      object Button5: TButton
+        Left = 152
+        Top = 240
+        Width = 75
+        Height = 25
+        Caption = #1074#1099#1095#1080#1089#1083#1080#1090#1100
+        TabOrder = 2
+        OnClick = Button5Click
+      end
+      object Edit4: TEdit
+        Left = 240
+        Top = 112
+        Width = 121
+        Height = 21
+        TabOrder = 3
+      end
+      object Edit5: TEdit
+        Left = 240
+        Top = 152
+        Width = 121
+        Height = 21
+        TabOrder = 4
+      end
+      object Edit6: TEdit
+        Left = 584
+        Top = 136
+        Width = 121
+        Height = 21
+        ReadOnly = True
+        TabOrder = 5
+      end
+    end
+  end
+end

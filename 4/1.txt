@@ -1,0 +1,4 @@
+select b.NOMERREISA, count(a.nomermesta),
+  (select sum(c.kolichestvomest) from avtobus c inner join otpravlenie d on (c.nomeravtobusa=d.nomeravtobusa) where (b.NOMERREISA=d.NOMERREISA))
+from prodazha a inner join otpravlenie b on a.identificator=b.identificator
+group by b.nomerreisa

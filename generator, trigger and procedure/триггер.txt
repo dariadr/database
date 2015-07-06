@@ -1,0 +1,5 @@
+create generator g4;
+create trigger tr9 for RASPISANIE before insert as
+begin
+new.identificatorraspisania=gen_id(g4,1);
+end;

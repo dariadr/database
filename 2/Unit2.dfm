@@ -1,0 +1,366 @@
+object DataModule2: TDataModule2
+  OldCreateOrder = False
+  Left = 1003
+  Top = 191
+  Height = 527
+  Width = 642
+  object IBDatabase1: TIBDatabase
+    Connected = True
+    DatabaseName = 's2itm:d:\sb\ivt-11\droz_dv.ib'
+    Params.Strings = (
+      'user_name=DROZ_DV')
+    DefaultTransaction = IBTransaction1
+    Left = 48
+    Top = 40
+  end
+  object IBTransaction1: TIBTransaction
+    Active = True
+    DefaultDatabase = IBDatabase1
+    Params.Strings = (
+      'read_committed'
+      'rec_version'
+      'nowait')
+    AutoStopAction = saCommit
+    Left = 128
+    Top = 40
+  end
+  object IBTable1: TIBTable
+    Database = IBDatabase1
+    Transaction = IBTransaction1
+    FieldDefs = <
+      item
+        Name = 'NASELENNIIPUNKT'
+        Attributes = [faRequired]
+        DataType = ftString
+        Size = 75
+      end>
+    IndexDefs = <
+      item
+        Name = 'RDB$PRIMARY3'
+        Fields = 'NASELENNIIPUNKT'
+        Options = [ixPrimary, ixUnique]
+      end>
+    StoreDefs = True
+    TableName = 'MESTO'
+    Left = 200
+    Top = 40
+  end
+  object IBTable2: TIBTable
+    Database = IBDatabase1
+    Transaction = IBTransaction1
+    FieldDefs = <
+      item
+        Name = 'KLUCH'
+        Attributes = [faRequired]
+        DataType = ftSmallint
+      end
+      item
+        Name = 'NOMERREISA'
+        Attributes = [faRequired]
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'DLINAPUTI'
+        Attributes = [faRequired]
+        DataType = ftSmallint
+      end
+      item
+        Name = 'NASELENNIIPUNKT'
+        Attributes = [faRequired]
+        DataType = ftString
+        Size = 75
+      end
+      item
+        Name = 'IDENTIFY'
+        Attributes = [faRequired]
+        DataType = ftInteger
+      end>
+    Filtered = True
+    IndexDefs = <
+      item
+        Name = 'RDB$FOREIGN4'
+        Fields = 'NOMERREISA'
+      end
+      item
+        Name = 'RDB$FOREIGN5'
+        Fields = 'NASELENNIIPUNKT'
+      end
+      item
+        Name = 'RDB$PRIMARY6'
+        Fields = 'IDENTIFY'
+        Options = [ixPrimary, ixUnique]
+      end
+      item
+        Name = 'RDB$7'
+        Fields = 'NOMERREISA;KLUCH'
+        Options = [ixUnique]
+      end
+      item
+        Name = 'RDB$8'
+        Fields = 'NOMERREISA;NASELENNIIPUNKT'
+        Options = [ixUnique]
+      end>
+    StoreDefs = True
+    TableName = 'MARSHRUT'
+    Left = 272
+    Top = 40
+  end
+  object IBTable3: TIBTable
+    Database = IBDatabase1
+    Transaction = IBTransaction1
+    FieldDefs = <
+      item
+        Name = 'NOMERAVTOBUSA'
+        Attributes = [faRequired]
+        DataType = ftString
+        Size = 10
+      end
+      item
+        Name = 'NOMERREISA'
+        Attributes = [faRequired]
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'DATAIVREMIA'
+        Attributes = [faRequired]
+        DataType = ftDateTime
+      end
+      item
+        Name = 'IDENTIFICATOR'
+        Attributes = [faRequired]
+        DataType = ftInteger
+      end
+      item
+        Name = 'CENABILETA'
+        Attributes = [faRequired]
+        DataType = ftBCD
+        Precision = 7
+        Size = 2
+      end>
+    IndexDefs = <
+      item
+        Name = 'RDB$FOREIGN9'
+        Fields = 'NOMERAVTOBUSA'
+      end
+      item
+        Name = 'RDB$FOREIGN10'
+        Fields = 'NOMERREISA'
+      end
+      item
+        Name = 'RDB$PRIMARY11'
+        Fields = 'IDENTIFICATOR'
+        Options = [ixPrimary, ixUnique]
+      end
+      item
+        Name = 'RDB$12'
+        Fields = 'DATAIVREMIA;NOMERREISA'
+        Options = [ixUnique]
+      end
+      item
+        Name = 'RDB$13'
+        Fields = 'DATAIVREMIA;NOMERAVTOBUSA'
+        Options = [ixUnique]
+      end>
+    StoreDefs = True
+    TableName = 'OTPRAVLENIE'
+    Left = 344
+    Top = 40
+  end
+  object IBTable5: TIBTable
+    Database = IBDatabase1
+    Transaction = IBTransaction1
+    FieldDefs = <
+      item
+        Name = 'KLUCH'
+        Attributes = [faRequired]
+        DataType = ftSmallint
+      end
+      item
+        Name = 'NOMERREISA'
+        Attributes = [faRequired]
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'DLINAPUTI'
+        Attributes = [faRequired]
+        DataType = ftSmallint
+      end
+      item
+        Name = 'NASELENNIIPUNKT'
+        Attributes = [faRequired]
+        DataType = ftString
+        Size = 75
+      end
+      item
+        Name = 'IDENTIFY'
+        Attributes = [faRequired]
+        DataType = ftInteger
+      end>
+    IndexDefs = <
+      item
+        Name = 'RDB$FOREIGN4'
+        Fields = 'NOMERREISA'
+      end
+      item
+        Name = 'RDB$FOREIGN5'
+        Fields = 'NASELENNIIPUNKT'
+      end
+      item
+        Name = 'RDB$PRIMARY6'
+        Fields = 'IDENTIFY'
+        Options = [ixPrimary, ixUnique]
+      end
+      item
+        Name = 'RDB$7'
+        Fields = 'NOMERREISA;KLUCH'
+        Options = [ixUnique]
+      end
+      item
+        Name = 'RDB$8'
+        Fields = 'NOMERREISA;NASELENNIIPUNKT'
+        Options = [ixUnique]
+      end>
+    StoreDefs = True
+    TableName = 'MARSHRUT'
+    Left = 488
+    Top = 40
+  end
+  object IBTable6: TIBTable
+    Database = IBDatabase1
+    Transaction = IBTransaction1
+    Active = True
+    FieldDefs = <
+      item
+        Name = 'IDENTIFICATOR'
+        Attributes = [faRequired]
+        DataType = ftInteger
+      end
+      item
+        Name = 'CENABILETA'
+        DataType = ftBCD
+        Precision = 7
+        Size = 2
+      end
+      item
+        Name = 'DATAIVREMIA'
+        Attributes = [faRequired]
+        DataType = ftDateTime
+      end
+      item
+        Name = 'NOMERMESTA'
+        Attributes = [faRequired]
+        DataType = ftSmallint
+      end
+      item
+        Name = 'NACHALOPUTI'
+        Attributes = [faRequired]
+        DataType = ftInteger
+      end
+      item
+        Name = 'KONECPUTI'
+        Attributes = [faRequired]
+        DataType = ftInteger
+      end
+      item
+        Name = 'TIP'
+        Attributes = [faRequired]
+        DataType = ftString
+        Size = 75
+      end>
+    IndexDefs = <
+      item
+        Name = 'RDB$FOREIGN15'
+        Fields = 'IDENTIFICATOR'
+      end
+      item
+        Name = 'RDB$FOREIGN16'
+        Fields = 'NACHALOPUTI'
+      end
+      item
+        Name = 'RDB$FOREIGN17'
+        Fields = 'KONECPUTI'
+      end
+      item
+        Name = 'RDB$FOREIGN18'
+        Fields = 'TIP'
+      end
+      item
+        Name = 'RDB$PRIMARY19'
+        Fields = 'NOMERMESTA;IDENTIFICATOR'
+        Options = [ixPrimary, ixUnique]
+      end
+      item
+        Name = 'OTPRAV'
+        Fields = 'DATAIVREMIA'
+      end>
+    StoreDefs = True
+    TableName = 'PRODAZHA'
+    OnFilterRecord = IBTable6FilterRecord
+    Left = 48
+    Top = 120
+  end
+  object IBTable4: TIBTable
+    Database = IBDatabase1
+    Transaction = IBTransaction1
+    ForcedRefresh = True
+    Active = True
+    FieldDefs = <
+      item
+        Name = 'TIP'
+        Attributes = [faRequired]
+        DataType = ftString
+        Size = 75
+      end
+      item
+        Name = 'IDENTIFICATORRASPISANIA'
+        Attributes = [faRequired]
+        DataType = ftInteger
+      end
+      item
+        Name = 'NOMERREISA'
+        Attributes = [faRequired]
+        DataType = ftString
+        Size = 20
+      end>
+    IndexDefs = <
+      item
+        Name = 'RDB$FOREIGN21'
+        Fields = 'TIP'
+      end
+      item
+        Name = 'RDB$PRIMARY22'
+        Fields = 'IDENTIFICATORRASPISANIA'
+        Options = [ixPrimary, ixUnique]
+      end
+      item
+        Name = 'RDB$FOREIGN23'
+        Fields = 'NOMERREISA'
+      end
+      item
+        Name = 'RDB$24'
+        Fields = 'NOMERREISA;TIP'
+        Options = [ixUnique]
+      end>
+    IndexFieldNames = 'NOMERREISA;TIP'
+    StoreDefs = True
+    TableName = 'RASPISANIE'
+    Left = 416
+    Top = 40
+    object IBTable4TIP: TIBStringField
+      FieldName = 'TIP'
+      Required = True
+      Size = 75
+    end
+    object IBTable4IDENTIFICATORRASPISANIA: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'IDENTIFICATORRASPISANIA'
+    end
+    object IBTable4NOMERREISA: TIBStringField
+      FieldName = 'NOMERREISA'
+      Required = True
+    end
+  end
+end
